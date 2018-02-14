@@ -1,0 +1,7 @@
+RUN THE TESTRPC For ethereum
+
+
+npm install -g ethereumjs-testrpc
+
+testrpc
+
