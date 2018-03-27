@@ -1,0 +1,22 @@
+copy and paste this command for install studio-3t
+
+
+
+
+
+
+
+
+wget https://download.studio3t.com/studio-3t/linux/2018.1.0/studio-3t-linux-x64.tar.gz
+
+tar -xzf studio-3t-linux-x64.tar.gz
+
+sh studio-3t-linux-x64-no-shell.sh
+
+
+
+
+
+After last command the GUI come and follow these steps
+
+
