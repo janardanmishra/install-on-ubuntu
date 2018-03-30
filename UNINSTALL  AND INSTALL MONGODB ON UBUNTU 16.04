@@ -17,7 +17,7 @@ INSTALL
  sudo apt-get update
  sudo apt-get install -y mongodb-org
 
- # sudo nano /etc/systemd/system/mongodb.service
+ sudo nano /etc/systemd/system/mongodb.service
 
 
 
@@ -49,11 +49,11 @@ WantedBy=multi-user.target
 
 
 
-# sudo systemctl daemon-reload
- # sudo systemctl enable mongod
- # sudo systemctl start mongod
+ sudo systemctl daemon-reload
+ sudo systemctl enable mongod
+ sudo systemctl start mongod
 
-# systemctl status mongod
+ systemctl status mongod
 
 
 
@@ -78,5 +78,5 @@ Jun 29 07:13:54 test systemd[1]: Started High-performance, schema-free document-
 
 
 // start the mongo
-# mongo
+ mongo
 
