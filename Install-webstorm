@@ -1,0 +1,36 @@
+UNinstall Webstrom
+go to ubuntu software and remove the webstrom
+Then, go to home and press cant+h to show the .webstrom and hit this command with your webstrom version
+
+rm -rf ~/.WebStorm9
+
+
+
+First install java (If you don't have):
+
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+sudo apt-get install oracle-java8-set-default
+
+
+go to this link, select linux and click on download
+
+go to downloads and hit the following command , with there wevstrom version
+
+tar xfz WebStorm-2016.2.4.tar.gz 
+cd WebStorm-162.1121.31/
+cd bin/
+chmod -R 755 webstorm.sh 
+./webstorm.sh
+
+
+
+
+.......................................................
+use this on the time of installation
+
+http://xidea.online/servers.html
+
+
+
