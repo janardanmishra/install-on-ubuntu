@@ -10,3 +10,13 @@ Postman-linux-x64-6.0.10.tar.gz
 
 extract the folder , open this and run the executing file name as postman 
 
+
+//////////////////////////////////////////  OR //////////////////////////////////////////
+
+Open your terminal by pressing Ctrl+Alt+T and install the Postman snap package, by typing:
+
+sudo snap install postman
+
+
+
+
