@@ -8,75 +8,52 @@ sudo apt-get purge mongodb-org*
 sudo rm -r /var/log/mongodb
 sudo rm -r /var/lib/mongodb
 
-
 INSTALL
 
+Ubuntu 18.04 
 
- sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
- echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
- sudo apt-get update
- sudo apt-get install -y mongodb-org
-
- sudo nano /etc/systemd/system/mongodb.service
+follow:
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
 
 
+wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
 
+sudo apt-get install gnupg
 
+wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
 
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
 
+sudo apt-get update
 
+sudo apt-get install -y mongodb-org=4.2.3 mongodb-org-server=4.2.3 mongodb-org-shell=4.2.3 mongodb-org-mongos=4.2.3 mongodb-org-tools=4.2.3
 
-
-Paste the following text below:
-
-[Unit]
-Description=High-performance, schema-free document-oriented database
-After=network.target
-Documentation=https://docs.mongodb.org/manual
-
-[Service]
-User=mongodb
-Group=mongodb
-ExecStart=/usr/bin/mongod --quiet --config /etc/mongod.conf
-
-[Install]
-WantedBy=multi-user.target
-
-
-
-
-
-
-
-
- sudo systemctl daemon-reload
- sudo systemctl enable mongod
- sudo systemctl start mongod
-
- systemctl status mongod
-
-
-
-The output should look something like this:
-
-
-mongodb.service - High-performance, schema-free document-oriented database
-   Loaded: loaded (/lib/systemd/system/mongod.service; enabled; vendor preset: enabled)
-   Active: active (running) since Thu 2017-06-29 07:13:54 CDT; 8s ago
-     Docs: https://docs.mongodb.org/manual
- Main PID: 4734 (mongod)
-   CGroup: /system.slice/mongodb.service
-           └─4734 /usr/bin/mongod --quiet --config /etc/mongod.conf
-
-Jun 29 07:13:54 test systemd[1]: Started High-performance, schema-free document-oriented database.
-
-
-
-
-
-
+sudo systemctl start mongod
 
 
 // start the mongo
  mongo
+ 
+ 
+ 
+ Other Commands:
+ 
+ You can optionally ensure that MongoDB will start following a system reboot by issuing the following command:
+ sudo systemctl enable mongod
+ 
+ 
+ ----------------------------------------------------------------------------------------------------
+ 
+ sudo systemctl stop mongod
+ 
+ sudo systemctl restart mongod
+ 
+ sudo service mongod start
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
