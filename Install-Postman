@@ -1,22 +1,6 @@
-Go to this link and select your O/S and download
+paste these command:
 
-
-https://www.getpostman.com/apps
-
-
-
-after downloading it is a  tar file like this-
-Postman-linux-x64-6.0.10.tar.gz
-
-extract the folder , open this and run the executing file name as postman 
-
-
-//////////////////////////////////////////  OR //////////////////////////////////////////
-
-Open your terminal by pressing Ctrl+Alt+T and install the Postman snap package, by typing:
-
-sudo snap install postman
-
-
-
-
+1  sudo apt update
+2  sudo apt install snapd
+3  sudo snap install postman
+4  postman
