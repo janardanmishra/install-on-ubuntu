@@ -12,3 +12,13 @@ janardan:~$ node -v
 v16.20.2
 janardan:~$ npm -v
 8.19.4
+
+
+
+
+curl -fsSL https://deb.nodesource.com/setup_20.x |sudo -E bash -
+sudo apt install -y nodejs
+node -v
+v20.12.2
+
+
